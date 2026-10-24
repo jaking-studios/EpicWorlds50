@@ -10,6 +10,11 @@
 <img alt="Category" src="https://img.shields.io/badge/category-Art%20%26%20Design-purple">
 </p>
 
+<p align="center">
+<a href="https://github.com/sponsors/jaineil32624"><img src="https://img.shields.io/badge/Sponsor_EpicWorlds50-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor"></a>
+<a href="https://github.com/jaking-studios"><img src="https://img.shields.io/badge/More_from_JaKing_Studios-E2B04A?style=for-the-badge&logo=github&logoColor=black" alt="JaKing Studios"></a>
+</p>
+
 ---
 
 ## Download in one click
@@ -201,6 +206,15 @@ Suggested repository topics: `blender` `environment-art` `geometry-nodes` `proce
 
 Each new world is one script in `SourceFiles/worlds/` built on the shared pipeline. Planned pipeline upgrades:
 Cycles texture baking for real-time export, a central asset-library `.blend`, real-time exports (glTF), and HDRI lighting presets.
+
+## Support the project
+
+EpicWorlds50 is free to download. Building and rendering 50 worlds takes a lot of GPU hours, so if you enjoy it,
+consider **[sponsoring on GitHub](https://github.com/sponsors/jaineil32624)**. Sponsors help fund the next batches
+of worlds and the 1080p trailer renders, and every sponsor gets a thank-you in the credits of the next milestone.
+
+Want a custom world or landmark built for your project? Open a request on
+[JaKing's profile](https://github.com/jaineil32624/jaineil32624/issues/new?template=game-request.yml).
 
 ## Credits
 
