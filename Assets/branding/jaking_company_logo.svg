@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-label="Jaking Company">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6c453"/>
+      <stop offset="1" stop-color="#e07a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="160" rx="18" fill="#10131c"/>
+  <!-- crown-mountain mark: a J whose top forms three peaks -->
+  <g transform="translate(34 28)">
+    <path d="M8 40 L28 8 L44 30 L60 2 L76 30 L92 8 L112 40 Z" fill="url(#g)"/>
+    <path d="M72 48 L72 92 Q72 112 52 112 Q32 112 28 96" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <text x="170" y="86" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="800" fill="#f4f1ea" letter-spacing="2">JAKING</text>
+  <text x="172" y="122" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#f6c453" letter-spacing="9">COMPANY</text>
+  <text x="430" y="122" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#8b93a7" letter-spacing="3">WORLD STUDIO</text>
+</svg>
