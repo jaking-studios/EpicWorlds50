@@ -13,7 +13,7 @@ TR = os.path.join(ROOT, "Trailers")
 FR = os.path.join(TR, "frames")
 LOG = os.path.join(TR, "trailer_progress.json")
 FPS = 24
-RES = (1920, 1080)
+RES = (1280, 720)
 WORLDS = [
     ("RealWorldLandmarks", "RW01_GizaPlateau", "GIZA PLATEAU", "Great Pyramid of Khufu · 138 m"),
     ("RealWorldLandmarks", "RW02_MontSaintMichel", "MONT-SAINT-MICHEL", "Abbey spire · 177 m"),
@@ -43,7 +43,7 @@ def render_world(sub, wid):
     bpy.ops.wm.open_mainfile(filepath=os.path.join(ROOT, sub, wid + ".blend"))
     sc = bpy.context.scene
     ee = sc.eevee
-    for a, v in (("taa_render_samples", 16), ("volumetric_samples", 24), ("volumetric_tile_size", '16'),
+    for a, v in (("taa_render_samples", 8), ("volumetric_samples", 16), ("volumetric_tile_size", '16'),
                  ("use_raytracing", False)):
         try:
             setattr(ee, a, v)
@@ -171,36 +171,35 @@ def edit_and_encode(lengths):
     sc.render.resolution_x, sc.render.resolution_y = RES
     sc.render.resolution_percentage = 100
     sc.render.fps = FPS
+    sc.view_settings.view_transform = 'Standard'  # frames are already graded; don't grade twice
     se = sc.sequence_editor_create()
     col = strips_of(se)
     t = 1
     add_color(se, "IntroBG", 1, t, INTRO, (0.05, 0.06, 0.09))
-    add_text(se, "IntroBrand", "JAKING COMPANY PRESENTS", 3, t, INTRO, 42, 0.64, (0.96, 0.77, 0.33, 1))
-    add_text(se, "IntroTitle", "EpicWorlds50", 4, t, INTRO, 160, 0.47)
-    add_text(se, "IntroSub", "5 WORLDS. 1 ADVENTURE.", 5, t, INTRO, 56, 0.31, (1, 1, 1, 1))
+    add_text(se, "IntroBrand", "JAKING COMPANY PRESENTS", 3, t, INTRO, 28, 0.64, (0.96, 0.77, 0.33, 1))
+    add_text(se, "IntroTitle", "EpicWorlds50", 4, t, INTRO, 107, 0.47)
+    add_text(se, "IntroSub", "5 WORLDS. 1 ADVENTURE.", 5, t, INTRO, 37, 0.31, (1, 1, 1, 1))
     t += INTRO
     for k, ((sub, wid, name, lm), n) in enumerate(zip(WORLDS, lengths), 1):
         first = os.path.join(FR, wid, "0001.png")
         img = col.new_image(name=wid, filepath=first, channel=1, frame_start=t)
         for i in range(2, n + 1):
             img.elements.append(f"{i:04d}.png")
-        try:
-            img.frame_final_duration = n
-        except Exception:
-            pass
-        add_text(se, wid + "_num", f"WORLD {k:02d} / 05", 5, t + 6, 66, 30, 0.88, (0.96, 0.77, 0.33, 1))
-        add_text(se, wid + "_name", name, 3, t + 10, n - 20, 84, 0.14)
-        add_text(se, wid + "_lm", "MEGA LANDMARK: " + lm.upper(), 4, t + 16, n - 26, 32, 0.075, (0.96, 0.77, 0.33, 1))
+        add_text(se, wid + "_num", f"WORLD {k:02d} / 05", 5, t + 6, 66, 30, 0.9, (0.96, 0.77, 0.33, 1))
+        add_text(se, wid + "_name", name, 3, t + 10, n - 20, 64, 0.15)
+        add_text(se, wid + "_lm", "MEGA LANDMARK: " + lm.upper(), 4, t + 16, n - 26, 30, 0.07, (0.96, 0.77, 0.33, 1))
         t += n
     add_color(se, "OutroBG", 1, t, OUTRO, (0.05, 0.06, 0.09))
-    add_text(se, "OutroHook", "YOUR ADVENTURE STARTS NOW", 7, t, OUTRO, 84, 0.76)
-    add_text(se, "OutroTitle", "Play all 5 worlds free in your browser", 3, t, OUTRO, 50, 0.6, (0.85, 0.87, 0.92, 1), False)
-    add_text(se, "OutroURL", "jaking-studios.github.io/EpicWorlds50", 4, t, OUTRO, 52, 0.48, (0.96, 0.77, 0.33, 1))
-    add_text(se, "OutroSupport", "Support new worlds: patreon.com/c/JaineilRana", 5, t, OUTRO, 38, 0.32, (0.85, 0.87, 0.92, 1), False)
-    add_text(se, "OutroName", "Made by Jaineil Rana (JaKing) · JaKing Studios", 6, t, OUTRO, 30, 0.2, (0.7, 0.73, 0.8, 1), False)
+    add_text(se, "OutroHook", "YOUR ADVENTURE STARTS NOW", 7, t, OUTRO, 56, 0.76)
+    add_text(se, "OutroTitle", "Play all 5 worlds free in your browser", 3, t, OUTRO, 33, 0.6, (0.85, 0.87, 0.92, 1), False)
+    add_text(se, "OutroURL", "jaking-studios.github.io/EpicWorlds50", 4, t, OUTRO, 35, 0.48, (0.96, 0.77, 0.33, 1))
+    add_text(se, "OutroSupport", "Support new worlds: patreon.com/c/JaineilRana", 5, t, OUTRO, 25, 0.32, (0.85, 0.87, 0.92, 1), False)
+    add_text(se, "OutroName", "Made by Jaineil Rana (JaKing) · JaKing Studios", 6, t, OUTRO, 20, 0.2, (0.7, 0.73, 0.8, 1), False)
     t += OUTRO
     sc.frame_start, sc.frame_end = 1, t - 1
     r = sc.render
+    if hasattr(r.image_settings, 'media_type'):
+        r.image_settings.media_type = 'VIDEO'
     r.image_settings.file_format = 'FFMPEG'
     r.ffmpeg.format = 'MPEG4'
     r.ffmpeg.codec = 'H264'
