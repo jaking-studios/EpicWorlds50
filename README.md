@@ -11,12 +11,17 @@
 </p>
 
 <p align="center">
+<a href="https://youtu.be/AMUR3_Rnyoo"><img src="https://img.shields.io/badge/Watch_the_trailer-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch the trailer"></a>
 <a href="https://jaking-studios.github.io/EpicWorlds50/"><img src="https://img.shields.io/badge/▶_Play_in_browser-E2B04A?style=for-the-badge&logo=threedotjs&logoColor=black" alt="Play"></a>
 <a href="https://github.com/sponsors/jaineil32624"><img src="https://img.shields.io/badge/Sponsor_EpicWorlds50-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor"></a>
 <a href="https://github.com/jaking-studios"><img src="https://img.shields.io/badge/More_from_JaKing_Studios-E2B04A?style=for-the-badge&logo=github&logoColor=black" alt="JaKing Studios"></a>
 </p>
 
 ---
+
+## 🎬 Trailer
+
+[![EpicWorlds50 trailer](Trailers/EpicWorlds50_Thumbnail.jpg)](https://youtu.be/AMUR3_Rnyoo)
 
 ## ▶ Play in your browser
 
