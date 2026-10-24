@@ -1,0 +1,32 @@
+{
+  "id": "FW03_SkyKingdom",
+  "title": "Sky Kingdom - The Floating Continents",
+  "category": "fantasy",
+  "lore": "When the old world sank beneath the Cloud Sea, its mountain-tops broke free and rose. The Sky Kingdom now drifts on those islands, linked by rope bridges and sky-ships. At its centre the Storm Temple holds a captive thunderstorm, and a sunken bell tower can still be glimpsed through gaps in the clouds far below.",
+  "mega_landmark": {
+    "name": "Storm Temple",
+    "height_m": 706.8,
+    "top": [
+      0,
+      0,
+      706.8
+    ]
+  },
+  "objects": 435,
+  "base_mesh_vertices": 12981,
+  "build_seconds": 0.06,
+  "blender": "5.2.0 LTS",
+  "notes": [
+    "Islands float via drivers; bridges sag procedurally",
+    "Captive storm with randomised lightning flashes",
+    "Secret: sunken bell tower visible below the cloud sea"
+  ],
+  "frames": 1440,
+  "fps": 24,
+  "blend_file": "FantasyWorlds/FW03_SkyKingdom.blend",
+  "blend_mb": 0.59,
+  "preview_render_seconds_960x540": {
+    "CAM_HeroReveal": 11.84,
+    "CAM_Aerial": 6.3
+  }
+}

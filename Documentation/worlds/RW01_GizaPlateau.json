@@ -1,0 +1,31 @@
+{
+  "id": "RW01_GizaPlateau",
+  "title": "Giza Plateau - The Great Pyramids",
+  "category": "real",
+  "lore": "Late afternoon on the Giza plateau: the three great pyramids rise over a sea of dunes, the Sphinx guards the causeway, and the Nile valley glows green on the eastern horizon.",
+  "mega_landmark": {
+    "name": "Great Pyramid of Khufu",
+    "height_m": 138.5,
+    "top": [
+      0,
+      0,
+      137.0
+    ]
+  },
+  "objects": 207,
+  "base_mesh_vertices": 51093,
+  "build_seconds": 0.38,
+  "blender": "5.2.0 LTS",
+  "notes": [
+    "Interior: King's Chamber + Grand Gallery (CAM_Interior_KingsChamber)",
+    "Real dimensions: Khufu 230.3 m base / 138.5 m, Khafre 215.3/136.4, Menkaure 104.6/65.5"
+  ],
+  "frames": 1440,
+  "fps": 24,
+  "blend_file": "RealWorldLandmarks/RW01_GizaPlateau.blend",
+  "blend_mb": 2.11,
+  "preview_render_seconds_960x540": {
+    "CAM_HeroReveal": 21.55,
+    "CAM_Aerial": 3.26
+  }
+}

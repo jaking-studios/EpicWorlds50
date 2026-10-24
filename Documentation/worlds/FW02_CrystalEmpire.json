@@ -1,0 +1,31 @@
+{
+  "id": "FW02_CrystalEmpire",
+  "title": "Crystal Empire - City of the Prism Spire",
+  "category": "fantasy",
+  "lore": "The Crystal Empire grew from a single seed-shard that fell during the Night of Falling Light. Its people sing the crystals into shape: hexagonal towers ring the Prism Spire, whose heartbeat pulse powers the whole city. Shards torn loose by old storms still hover over the valley, and the Echo Caves beneath the northern ridge answer anyone who sings.",
+  "mega_landmark": {
+    "name": "Prism Spire",
+    "height_m": 640,
+    "top": [
+      0,
+      0,
+      630
+    ]
+  },
+  "objects": 244,
+  "base_mesh_vertices": 42673,
+  "build_seconds": 0.27,
+  "blender": "5.2.0 LTS",
+  "notes": [
+    "Secret: Echo Caves under the north ridge",
+    "Prism Spire heart pulses and powers 4 energy beams"
+  ],
+  "frames": 1440,
+  "fps": 24,
+  "blend_file": "FantasyWorlds/FW02_CrystalEmpire.blend",
+  "blend_mb": 1.63,
+  "preview_render_seconds_960x540": {
+    "CAM_HeroReveal": 30.6,
+    "CAM_Aerial": 12.56
+  }
+}

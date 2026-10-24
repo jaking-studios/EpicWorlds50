@@ -1,0 +1,31 @@
+{
+  "id": "RW02_MontSaintMichel",
+  "title": "Mont-Saint-Michel - The Tidal Abbey",
+  "category": "real",
+  "lore": "A granite island crowned by a Gothic abbey rises out of the tidal flats of Normandy. Ramparts wrap a medieval village that spirals up to the church, and the spire's golden archangel can be seen from every corner of the bay.",
+  "mega_landmark": {
+    "name": "Abbey spire & golden archangel",
+    "height_m": 177.0,
+    "top": [
+      12,
+      -5,
+      177.0
+    ]
+  },
+  "objects": 411,
+  "base_mesh_vertices": 44758,
+  "build_seconds": 0.31,
+  "blender": "5.2.0 LTS",
+  "notes": [
+    "Interior: abbey nave with columns and candles (CAM_Interior_Nave)",
+    "Rampart gap faces the causeway; 110 procedural village houses spiral the rock"
+  ],
+  "frames": 1440,
+  "fps": 24,
+  "blend_file": "RealWorldLandmarks/RW02_MontSaintMichel.blend",
+  "blend_mb": 1.74,
+  "preview_render_seconds_960x540": {
+    "CAM_HeroReveal": 27.62,
+    "CAM_Aerial": 11.32
+  }
+}

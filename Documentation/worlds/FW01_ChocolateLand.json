@@ -1,0 +1,31 @@
+{
+  "id": "FW01_ChocolateLand",
+  "title": "Chocolate Land - Realm of the Cocoa Volcano",
+  "category": "fantasy",
+  "lore": "Long ago a falling star of pure cocoa struck the Sugar Plains. Its crater became the Cocoa Volcano, which still pours molten chocolate rivers through wafer forests and gingerbread villages. Candy-cane pillars mark the old Sugar Road; hidden inside the volcano's flank is the Truffle Vault, where the first recipe is said to be kept.",
+  "mega_landmark": {
+    "name": "Cocoa Volcano",
+    "height_m": 420,
+    "top": [
+      0,
+      600,
+      420
+    ]
+  },
+  "objects": 240,
+  "base_mesh_vertices": 57445,
+  "build_seconds": 0.35,
+  "blender": "5.2.0 LTS",
+  "notes": [
+    "Secret: Truffle Vault hidden in the volcano's east flank",
+    "3 chocolate rivers + chocolate waterfall + pulsing caramel crater"
+  ],
+  "frames": 1440,
+  "fps": 24,
+  "blend_file": "FantasyWorlds/FW01_ChocolateLand.blend",
+  "blend_mb": 1.85,
+  "preview_render_seconds_960x540": {
+    "CAM_HeroReveal": 8.07,
+    "CAM_Aerial": 7.12
+  }
+}
