@@ -52,11 +52,17 @@ md = f"""<p align="center"><img src="Assets/branding/jaking_company_logo.svg" wi
 </p>
 
 <p align="center">
+<a href="https://jaking-studios.github.io/EpicWorlds50/"><img src="https://img.shields.io/badge/▶_Play_in_browser-E2B04A?style=for-the-badge&logo=threedotjs&logoColor=black" alt="Play"></a>
 <a href="https://github.com/sponsors/jaineil32624"><img src="https://img.shields.io/badge/Sponsor_EpicWorlds50-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor"></a>
 <a href="https://github.com/jaking-studios"><img src="https://img.shields.io/badge/More_from_JaKing_Studios-E2B04A?style=for-the-badge&logo=github&logoColor=black" alt="JaKing Studios"></a>
 </p>
 
 ---
+
+## ▶ Play in your browser
+
+**[jaking-studios.github.io/EpicWorlds50](https://jaking-studios.github.io/EpicWorlds50/)**: every world runs in the browser
+(desktop and mobile) with a cinematic tour, free-orbit camera, live wind, birds, floating islands and clouds. Nothing to install.
 
 ## Download in one click
 
@@ -125,6 +131,7 @@ blender -b -P SourceFiles/build_all.py               # rebuild all worlds
 blender -b -P SourceFiles/build_all.py -- fw02       # just the Crystal Empire
 blender -b -P SourceFiles/build_all.py -- --renders  # + preview stills
 python Documentation/make_readme.py                  # refresh this README's stats
+# web export: open a world in Blender, then run SourceFiles/web_export.py from the Text Editor
 ```
 
 ```
@@ -137,6 +144,8 @@ EpicWorlds50/
 │   └── build_all.py
 ├── Renders/              preview stills (hero + aerial per world)
 ├── Trailers/             render_trailer.py (+ your rendered .mp4s)
+├── index.html, viewer.html   browser version (three.js), served by GitHub Pages
+├── web/worlds/<ID>/      world.glb (Draco), instances.bin (GN vegetation), meta.json (sky, cameras, drivers)
 ├── Documentation/        per-world JSON stats, devlog, pipeline notes
 ├── Assets/branding/      Jaking Company logo
 └── Animations/ Materials/ Textures/ Screenshots/   reserved for upcoming milestones
